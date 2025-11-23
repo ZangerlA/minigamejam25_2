@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqsnlrp5dcg8m"]
+
+[ext_resource type="Texture2D" uid="uid://cs5spfyf8wpxn" path="res://icon.svg" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://b4acnek77tsxt" path="res://sprite_2d_2.gd" id="1_ig7tw"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_0xm2m")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("1_0xm2m")
+script = ExtResource("1_ig7tw")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D2"]
