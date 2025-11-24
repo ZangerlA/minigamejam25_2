@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwendwhpkaoyv"]
+
+[ext_resource type="Script" uid="uid://d4i2ldjgufhp4" path="res://scripts/start_screen.gd" id="1_i8r30"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_i8r30")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -348.0
+offset_top = -333.0
+offset_right = 1791.0
+offset_bottom = 1013.0
+color = Color(0.42941594, 0.42941603, 0.429416, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 1157.0
+offset_bottom = 661.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "10 - 2 - BOOM!"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "START"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "QUIT"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(579, 322)
