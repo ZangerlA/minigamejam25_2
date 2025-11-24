@@ -35,6 +35,7 @@ func _on_keypad_button_pressed(button: Button) -> void:
 		return
 	
 	current_button = button
+	get_tree().change_scene_to_file("res://Scenes/maze_1.tscn")
 	
 
 func _input(event: InputEvent) -> void:
