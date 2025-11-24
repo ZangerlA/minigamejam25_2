@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqt5rsrb7g36q"]
+
+[ext_resource type="Script" uid="uid://b25hucyui7ohl" path="res://Scenes/Scripts/keypadButton.gd" id="1_rr6gn"]
+
+[node name="Button" type="Button"]
+offset_left = 8.000001
+offset_top = 7.999999
+offset_right = 26.0
+offset_bottom = 39.0
+scale = Vector2(1.1999996, 0.59999967)
+text = "1"
+script = ExtResource("1_rr6gn")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
