@@ -5,13 +5,13 @@ extends Button
 
 var flag_green : bool = false
 
+func _ready() -> void:
+	pressed.connect(_on_pressed)
 
 func _on_pressed():
 	if redrect_scene_path != "":
 		get_tree().change_scene_to_file(redrect_scene_path)
-	else:
-		print_debug("No scene path provided!")
-		# TODO Not Implemented yet text here
+
 
 func setDone():
 	flag_green = true
