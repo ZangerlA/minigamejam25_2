@@ -5,7 +5,7 @@ extends Control
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 func play_music():
-	audio_stream_player.stream = preload("res://music/bomb_music.mp3")
+	audio_stream_player.stream = preload("res://music-video/bomb_music.mp3")
 	audio_stream_player.play()
 
 func _ready():
