@@ -1,102 +1,160 @@
-[gd_scene load_steps=7 format=3 uid="uid://durjbymdpvtic"]
+[gd_scene load_steps=8 format=3 uid="uid://durjbymdpvtic"]
 
 [ext_resource type="Script" uid="uid://lbm0pn8oh8fn" path="res://Scenes/maze_1.gd" id="1_6d13i"]
 [ext_resource type="PackedScene" uid="uid://cj1jkkf8ywddo" path="res://Scenes/Wall.tscn" id="1_esdkj"]
 [ext_resource type="PackedScene" uid="uid://bfbnoe25cy0kl" path="res://game_over.tscn" id="2_hgd6t"]
+[ext_resource type="PackedScene" uid="uid://bqsnlrp5dcg8m" path="res://main.tscn" id="3_0edxw"]
 [ext_resource type="PackedScene" path="res://Scenes/Timer.tscn" id="3_6gn6f"]
-[ext_resource type="PackedScene" path="res://Scenes/FinishMaze.tscn" id="4_6gn6f"]
+[ext_resource type="PackedScene" uid="uid://8bt24kr1bjqx" path="res://Scenes/FinishMaze.tscn" id="4_6gn6f"]
 [ext_resource type="PackedScene" path="res://Scenes/Cursor.tscn" id="5_tx3rt"]
 
 [node name="Maze1" type="Node2D"]
+position = Vector2(0, 95.99999)
 scale = Vector2(5, 5)
 script = ExtResource("1_6d13i")
+gameover_scene_path = ExtResource("2_hgd6t")
+main_menu = ExtResource("3_0edxw")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(2.563326, 2.0400014)
+offset_left = -105.19998
+offset_top = -86.200005
+offset_right = -65.19998
+offset_bottom = -46.200005
+scale = Vector2(6.281, 5)
 color = Color(0.40069774, 0.40069774, 0.40069768, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Wall" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(5, 20.999998)
+position = Vector2(1.1999912, 29.799995)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall2" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(19, 21)
+position = Vector2(15.199991, 29.799995)
 scale = Vector2(0.1, 0.109)
 number = "2"
 
 [node name="Wall3" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(33, 21)
+position = Vector2(29.199993, 29.799995)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall4" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(47, 21)
+position = Vector2(43.199993, 29.799995)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall5" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(85, 14.000001)
+position = Vector2(81.19999, 22.799997)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall6" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(85, 28)
+position = Vector2(81.19999, 36.799995)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall7" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(95, 42)
+position = Vector2(91.19999, 50.799995)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall8" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(47, 35.000004)
+position = Vector2(43.199993, 43.8)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall9" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(59.999996, 47.399998)
+position = Vector2(56.19999, 56.199993)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall10" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(89.399994, 55.6)
+position = Vector2(85.59998, 64.4)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall11" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(77.99999, 67.2)
+position = Vector2(74.19998, 76)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall12" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(49.6, 56)
+position = Vector2(45.79999, 64.8)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall13" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(68, 77.2)
+position = Vector2(64.19999, 86)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall14" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(36.199997, 60)
+position = Vector2(32.39999, 68.8)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall15" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(22.199999, 60.6)
+position = Vector2(18.39999, 69.4)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall16" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(9.4, 60.6)
+position = Vector2(5.5999904, 69.4)
 scale = Vector2(0.1, 0.109)
 
 [node name="Wall17" parent="." instance=ExtResource("1_esdkj")]
-position = Vector2(4.7683716e-07, 60.4)
+position = Vector2(-3.8000083, 69.200005)
 scale = Vector2(0.1, 0.109)
 
 [node name="Timer" parent="." instance=ExtResource("3_6gn6f")]
 scale = Vector2(0.24800012, 0.272)
 
 [node name="FinishMaze" parent="." groups=["finish"] instance=ExtResource("4_6gn6f")]
-position = Vector2(23.2, 80.799995)
+position = Vector2(29.8, 92.799995)
 scale = Vector2(0.42941394, 0.88659394)
 
-[node name="Cursor" parent="." instance=ExtResource("5_tx3rt")]
-position = Vector2(27, 6.7999997)
+[node name="Cursor" parent="." node_paths=PackedStringArray("spawn_marker") instance=ExtResource("5_tx3rt")]
+position = Vector2(36.4, 3.5999992)
 scale = Vector2(0.14782701, -0.07784143)
+spawn_marker = NodePath("../Marker2D")
 gameover_scene_path = ExtResource("2_hgd6t")
+
+[node name="Wall18" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(81.19999, 22.799997)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall19" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(77.99999, 9.000004)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall20" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(69.19999, -3.9999955)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall21" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(56.199993, -16.399998)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall22" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(41.599995, -27.599995)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall23" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(-13.200003, 17.800003)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall24" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(-13.4, 3.4000041)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall25" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(-12.4, -10.399996)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall26" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(-4.2000027, -23.599998)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall27" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(9.199999, -31.399998)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall28" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(26.199995, -31.2)
+scale = Vector2(0.1, 0.109)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(22, 14.4000025)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(32.8, -11.599998)
 
 [connection signal="countdown_finished" from="Timer" to="." method="_on_timer_countdown_finished"]
 [connection signal="area_entered" from="FinishMaze" to="FinishMaze" method="_on_area_entered"]

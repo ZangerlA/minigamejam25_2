@@ -9,9 +9,26 @@ extends CharacterBody2D # Or RigidBody2D if you want more physics interactions
 
 var sprite_node: Sprite2D # Variable to hold your sprite node
 
+@export var spawn_marker: Marker2D = null
+
 func _ready():
 	# Get the sprite node when the scene is ready
 	sprite_node = get_node(sprite_path)
+	
+	# Handle spawning
+	if spawn_marker:
+		# Set cursor to spawn marker position
+		global_position = spawn_marker.global_position
+		
+		# Wait a frame for everything to be ready
+		await get_tree().process_frame
+		
+		# Warp mouse to spawn position
+		var spawn_global = spawn_marker.global_position
+		var viewport = get_viewport()
+		var canvas_transform = viewport.get_canvas_transform()
+		var screen_position = canvas_transform * spawn_global
+		Input.warp_mouse(screen_position)
 
 func _process(delta):
 	# Get the global mouse position
