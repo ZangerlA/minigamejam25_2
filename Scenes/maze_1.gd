@@ -4,6 +4,7 @@ extends Node2D
 @export var main_menu : PackedScene = null
 func _ready():
 	$Timer.start_countdown()
+	
 
 func on_timer_countdown_finished():
 	if gameover_scene_path != null:
