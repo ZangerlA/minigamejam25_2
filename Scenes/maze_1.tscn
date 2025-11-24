@@ -1,9 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwspli34x7lmt"]
+[gd_scene load_steps=4 format=3 uid="uid://cwspli34x7lmt"]
 
+[ext_resource type="Script" uid="uid://lbm0pn8oh8fn" path="res://Scenes/maze_1.gd" id="1_6d13i"]
 [ext_resource type="PackedScene" uid="uid://cj1jkkf8ywddo" path="res://Scenes/Wall.tscn" id="1_esdkj"]
+[ext_resource type="PackedScene" path="res://Scenes/Timer.tscn" id="3_6gn6f"]
 
 [node name="Maze1" type="Node2D"]
 scale = Vector2(5, 5)
+script = ExtResource("1_6d13i")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 40.0
@@ -43,3 +46,42 @@ scale = Vector2(0.1, 0.109)
 [node name="Wall8" parent="." instance=ExtResource("1_esdkj")]
 position = Vector2(47, 35.000004)
 scale = Vector2(0.1, 0.109)
+
+[node name="Wall9" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(59.999996, 47.399998)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall10" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(89.399994, 55.6)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall11" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(77.99999, 67.2)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall12" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(49.6, 56)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall13" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(68, 77.2)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall14" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(36.199997, 60)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall15" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(22.199999, 60.6)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall16" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(9.4, 60.6)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall17" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(4.7683716e-07, 60.4)
+scale = Vector2(0.1, 0.109)
+
+[node name="Timer" parent="." instance=ExtResource("3_6gn6f")]
+scale = Vector2(0.24800012, 0.272)
