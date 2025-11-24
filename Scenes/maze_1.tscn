@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwspli34x7lmt"]
+
+[ext_resource type="PackedScene" uid="uid://cj1jkkf8ywddo" path="res://Scenes/Wall.tscn" id="1_esdkj"]
+
+[node name="Maze1" type="Node2D"]
+scale = Vector2(5, 5)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2.563326, 2.0400014)
+color = Color(0.40069774, 0.40069774, 0.40069768, 1)
+
+[node name="Wall" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(5, 20.999998)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall2" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(19, 21)
+scale = Vector2(0.1, 0.109)
+number = "2"
+
+[node name="Wall3" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(33, 21)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall4" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(47, 21)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall5" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(85, 14.000001)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall6" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(85, 28)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall7" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(95, 42)
+scale = Vector2(0.1, 0.109)
+
+[node name="Wall8" parent="." instance=ExtResource("1_esdkj")]
+position = Vector2(47, 35.000004)
+scale = Vector2(0.1, 0.109)
