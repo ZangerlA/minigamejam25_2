@@ -1,14 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfnjyicylkj37"]
+[gd_scene load_steps=3 format=3 uid="uid://bfbnoe25cy0kl"]
 
 [ext_resource type="Script" uid="uid://mj4wv2y7u3h7" path="res://game_over.gd" id="1_yxx3c"]
 [ext_resource type="VideoStream" uid="uid://cocvavhsr8dor" path="res://music-video/game_over.ogv" id="2_yxx3c"]
 
-[node name="Game over" type="Node2D"]
+[node name="Game over" type="Node2D" node_paths=PackedStringArray("video_player")]
 script = ExtResource("1_yxx3c")
+video_player = NodePath("VideoStreamPlayer")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1155.0
+offset_bottom = 657.0
 stream = ExtResource("2_yxx3c")
 autoplay = true
 expand = true
