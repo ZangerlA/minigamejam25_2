@@ -2,9 +2,16 @@ extends Node2D
 
 @export var gameover_scene_path : PackedScene = null
 @export var main_menu : PackedScene = null
+
+
 func _ready():
+	Input.warp_mouse(Vector2(300,150))
 	$Timer.start_countdown()
 	
+	
+	
+#Input.warp_mouse_position(Vector2(25, 25))
+
 
 func on_timer_countdown_finished():
 	if gameover_scene_path != null:

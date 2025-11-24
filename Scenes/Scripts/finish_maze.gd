@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body):
 	if body.name == "Cursor":
-		player_reached_finish.emit()
+		get_tree().change_scene_to_file("res://main.tscn")

@@ -32,11 +32,10 @@ func _process(delta):
 func _on_area_2d_body_entered(body):
 	# 1. Controlla se l'oggetto (body) in collisione è nel Gruppo "finish"
 	if body.is_in_group("finish"):
-		# === CASO 1: OGGETTO CON TAG "finish" ===
-		if gameover_scene_path != null:
-			get_tree().change_scene_to_packed(gameover_scene_path)
+		get_tree().change_scene_to_packed(main_menu)
 		
-	else:
+	if body.is_in_group("Wall"):
 		# === CASO 2: OGGETTO SENZA TAG "finish" (o qualsiasi altro oggetto) ===
 		if main_menu != null:
 			get_tree().change_scene_to_packed(main_menu)
+			pass

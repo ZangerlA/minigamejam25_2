@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 		_update_labels()
 		set_process(false)
 		countdown_finished.emit()
+		get_tree().change_scene_to_file("res://game_over.tscn")
 		return
 
 	_update_labels()
