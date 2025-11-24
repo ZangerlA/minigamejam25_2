@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://f0syk2chvyw3"]
+[gd_scene load_steps=3 format=3 uid="uid://8bt24kr1bjqx"]
 
 [ext_resource type="Script" uid="uid://d38pvhhxnity1" path="res://Scenes/Scripts/finish_maze.gd" id="1_x3pn7"]
 

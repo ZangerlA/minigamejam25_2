@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://0iaqyj4vd2er"]
+[gd_scene load_steps=7 format=3 uid="uid://durjbymdpvtic"]
 
 [ext_resource type="Script" uid="uid://lbm0pn8oh8fn" path="res://Scenes/maze_1.gd" id="1_6d13i"]
 [ext_resource type="PackedScene" uid="uid://cj1jkkf8ywddo" path="res://Scenes/Wall.tscn" id="1_esdkj"]
-[ext_resource type="PackedScene" uid="uid://bgyra54hu2k6l" path="res://Scenes/Timer.tscn" id="3_6gn6f"]
-[ext_resource type="PackedScene" uid="uid://f0syk2chvyw3" path="res://Scenes/FinishMaze.tscn" id="4_6gn6f"]
-[ext_resource type="PackedScene" uid="uid://nhlfg368nu4t" path="res://Scenes/Cursor.tscn" id="5_tx3rt"]
+[ext_resource type="PackedScene" uid="uid://bfbnoe25cy0kl" path="res://game_over.tscn" id="2_hgd6t"]
+[ext_resource type="PackedScene" path="res://Scenes/Timer.tscn" id="3_6gn6f"]
+[ext_resource type="PackedScene" path="res://Scenes/FinishMaze.tscn" id="4_6gn6f"]
+[ext_resource type="PackedScene" path="res://Scenes/Cursor.tscn" id="5_tx3rt"]
 
 [node name="Maze1" type="Node2D"]
 scale = Vector2(5, 5)
@@ -95,6 +96,8 @@ scale = Vector2(0.42941394, 0.88659394)
 [node name="Cursor" parent="." instance=ExtResource("5_tx3rt")]
 position = Vector2(27, 6.7999997)
 scale = Vector2(0.14782701, -0.07784143)
+gameover_scene_path = ExtResource("2_hgd6t")
 
 [connection signal="countdown_finished" from="Timer" to="." method="_on_timer_countdown_finished"]
+[connection signal="area_entered" from="FinishMaze" to="FinishMaze" method="_on_area_entered"]
 [connection signal="player_reached_finish" from="FinishMaze" to="." method="_on_finish_maze_player_reached_finish"]
