@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfnjyicylkj37"]
+
+[ext_resource type="Script" uid="uid://mj4wv2y7u3h7" path="res://game_over.gd" id="1_yxx3c"]
+[ext_resource type="Texture2D" uid="uid://rw12qadpuwfy" path="res://big-bang-422305_1280.jpg" id="2_ccer4"]
+
+[sub_resource type="Animation" id="Animation_8u835"]
+resource_name = "game_over_pop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ftari"]
+_data = {
+&"game_over_pop": SubResource("Animation_8u835")
+}
+
+[node name="Game over" type="Node2D"]
+script = ExtResource("1_yxx3c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(523, 354.25)
+scale = Vector2(1.0625, 1.0535911)
+texture = ExtResource("2_ccer4")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.04755766, 0.047557645, 0.047557645, 1)
+light_mask = 513
+offset_left = 341.0
+offset_top = 290.0
+offset_right = 762.0
+offset_bottom = 386.0
+theme_override_font_sizes/font_size = 70
+text = "GAME OVER!"
+max_lines_visible = 18
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ftari")
+}
