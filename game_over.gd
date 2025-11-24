@@ -1,11 +1,6 @@
 extends Node2D
 
+var next_scene = preload("res://Scenes/start_screen.tscn")
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	$AnimationPlayer.play("game_over_popup")
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_video_stream_player_finished():
+	get_tree().change_scene_to_packed(next_scene)
