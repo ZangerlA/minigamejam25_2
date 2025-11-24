@@ -1,16 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://bqsnlrp5dcg8m"]
 
-[ext_resource type="Texture2D" uid="uid://cs5spfyf8wpxn" path="res://icon.svg" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://b4acnek77tsxt" path="res://sprite_2d_2.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://b1a1mgtoo6evw" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" path="res://Scenes/Timer.tscn" id="2_h2yge"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node" node_paths=PackedStringArray("timer_component")]
+script = ExtResource("1_0xm2m")
+timer_component = NodePath("Timer")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(5, 5)
-texture = ExtResource("1_0xm2m")
+[node name="Timer" parent="." instance=ExtResource("2_h2yge")]
+position = Vector2(529, 170)
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-texture = ExtResource("1_0xm2m")
-script = ExtResource("1_ig7tw")
-
-[node name="Camera2D" type="Camera2D" parent="Sprite2D2"]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 324)
