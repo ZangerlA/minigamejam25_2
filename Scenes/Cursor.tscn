@@ -1,16 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://nhlfg368nu4t"]
+[gd_scene load_steps=7 format=3 uid="uid://clt1dmxt3empt"]
 
 [ext_resource type="Script" uid="uid://wge2v7lii35h" path="res://Scenes/Scripts/cursor.gd" id="1_5vcpq"]
 [ext_resource type="Texture2D" uid="uid://cs5spfyf8wpxn" path="res://icon.svg" id="2_6qa2i"]
+[ext_resource type="PackedScene" path="res://game_over.tscn" id="2_8pq3g"]
+[ext_resource type="PackedScene" uid="uid://bqsnlrp5dcg8m" path="res://main.tscn" id="3_8pq3g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5vcpq"]
 radius = 39.012817
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vcpq"]
+size = Vector2(125, 128)
+
 [node name="Cursor" type="CharacterBody2D"]
 script = ExtResource("1_5vcpq")
+gameover_scene_path = ExtResource("2_8pq3g")
+main_menu = ExtResource("3_8pq3g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_6qa2i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_5vcpq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_5vcpq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

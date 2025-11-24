@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwspli34x7lmt"]
+[gd_scene load_steps=5 format=3 uid="uid://cwspli34x7lmt"]
 
 [ext_resource type="Script" uid="uid://lbm0pn8oh8fn" path="res://Scenes/maze_1.gd" id="1_6d13i"]
 [ext_resource type="PackedScene" uid="uid://cj1jkkf8ywddo" path="res://Scenes/Wall.tscn" id="1_esdkj"]
 [ext_resource type="PackedScene" path="res://Scenes/Timer.tscn" id="3_6gn6f"]
+[ext_resource type="PackedScene" path="res://Scenes/FinishMaze.tscn" id="4_6gn6f"]
 
 [node name="Maze1" type="Node2D"]
 scale = Vector2(5, 5)
@@ -85,3 +86,8 @@ scale = Vector2(0.1, 0.109)
 
 [node name="Timer" parent="." instance=ExtResource("3_6gn6f")]
 scale = Vector2(0.24800012, 0.272)
+
+[node name="FinishMaze" parent="." instance=ExtResource("4_6gn6f")]
+
+[connection signal="countdown_finished" from="Timer" to="." method="_on_timer_countdown_finished"]
+[connection signal="player_reached_finish" from="FinishMaze" to="." method="_on_finish_maze_player_reached_finish"]

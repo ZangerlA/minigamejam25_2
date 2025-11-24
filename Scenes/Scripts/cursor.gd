@@ -25,3 +25,18 @@ func _process(delta):
 
 	# Move the ball
 	#move_and_slide()
+
+@export var gameover_scene_path : PackedScene = null
+@export var main_menu : PackedScene = null
+
+func _on_area_2d_body_entered(body):
+	# 1. Controlla se l'oggetto (body) in collisione è nel Gruppo "finish"
+	if body.is_in_group("finish"):
+		# === CASO 1: OGGETTO CON TAG "finish" ===
+		if gameover_scene_path != null:
+			get_tree().change_scene_to_packed(gameover_scene_path)
+		
+	else:
+		# === CASO 2: OGGETTO SENZA TAG "finish" (o qualsiasi altro oggetto) ===
+		if main_menu != null:
+			get_tree().change_scene_to_packed(main_menu)
