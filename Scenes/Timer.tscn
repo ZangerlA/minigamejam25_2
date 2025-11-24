@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgyra54hu2k6l"]
+
+[ext_resource type="Script" uid="uid://kjxh4d3cswlt" path="res://Scenes/timer.gd" id="1_mdnnd"]
+
+[node name="Timer" type="Node2D"]
+script = ExtResource("1_mdnnd")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 92.0
+offset_bottom = 33.0
+
+[node name="Seconds" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 5.0
+offset_right = 61.0
+offset_bottom = 28.0
+text = "10:"
+
+[node name="Miliseconds" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 5.0
+offset_right = 87.0
+offset_bottom = 28.0
+text = "00"
